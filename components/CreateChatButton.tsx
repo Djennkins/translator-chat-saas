@@ -14,7 +14,7 @@ function CreateChatButton() {
     };
 
     return (
-        <Button variant="outline" onClick={createNewChat}>
+        <Button variant="ghost" onClick={createNewChat}>
             <MessageSquarePlus />
         </Button>
     );
