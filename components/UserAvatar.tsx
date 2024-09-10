@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import Image from 'next/image';
 
 function UserAvatar({
@@ -8,14 +8,20 @@ function UserAvatar({
     image,
     className,
 }: {
-    name: string;
-    image: string;
+    name?: string | null;
+    image?: string | null;
     className?: string;
 }) {
     return (
         <Avatar className={cn('bg-white text-black', className)}>
             {image && (
-                <Image src={image} alt={name} height={40} width={40} className="rounded-full" />
+                <Image
+                    src={image}
+                    alt={name || 'User Name'}
+                    height={40}
+                    width={40}
+                    className="rounded-full"
+                />
             )}
 
             <AvatarFallback delayMs={1000} className="dark:bg-white dark:text-black text-lg">
