@@ -3,7 +3,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import ClientProvider from '@/components/ClientProvider';
-import FirebaseAuthProvider from '@/components/ui/FirebaseAuthProvider';
+import FirebaseAuthProvider from '@/components/FirebaseAuthProvider';
 
 export const metadata: Metadata = {
     title: 'Create Next App',
