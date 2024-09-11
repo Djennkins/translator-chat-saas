@@ -1,6 +1,11 @@
 import PricingCards from '@/components/PricingCards';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '@/auth';
 
-function PricingPage() {
+async function PricingPage() {
+    const session = await getServerSession(authOptions);
+    console.log(session);
+
     return (
         <div className="isolate overflow-hidden bg-gray-900">
             <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
