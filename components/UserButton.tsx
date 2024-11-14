@@ -15,6 +15,7 @@ import { signIn, signOut } from 'next-auth/react';
 import { useSubscriptionStore } from '@/store/store';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import { StarIcon } from 'lucide-react';
+import ManageAccountButton from '@/components/ManageAccountButton';
 
 function UserButton({ session }: { session: Session | null }) {
     const subscription = useSubscriptionStore((state) => state.subscription);
@@ -49,7 +50,9 @@ function UserButton({ session }: { session: Session | null }) {
                                 <p>PRO</p>
                             </DropdownMenuLabel>
                             <DropdownMenuSeparator />
-                            <DropdownMenuItem>{/*<ManageAccountButton />*/}</DropdownMenuItem>
+                            <DropdownMenuItem>
+                                <ManageAccountButton />
+                            </DropdownMenuItem>
                         </>
                     )}
                     <DropdownMenuItem onClick={() => signOut()}>Sign Out</DropdownMenuItem>

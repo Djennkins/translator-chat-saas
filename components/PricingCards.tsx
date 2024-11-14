@@ -5,7 +5,7 @@ import CheckoutButton from '@/components/CheckoutButton';
 const tiers = [
     {
         name: 'Starter',
-        id: 'pro',
+        id: null,
         href: '#',
         priceMonthly: null,
         description: 'Get chatting right away with anyone, anywhere!',

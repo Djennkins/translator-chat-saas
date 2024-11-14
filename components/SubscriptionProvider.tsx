@@ -26,7 +26,7 @@ function SubscriptionProvider({ children }: { children: ReactNode }) {
                 }
             },
             (error) => {
-                console.error('error');
+                console.error('An error occurred', error);
             }
         );
     }, [session, setSubscription]);
