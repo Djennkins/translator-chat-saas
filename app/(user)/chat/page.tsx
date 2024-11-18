@@ -1,3 +1,5 @@
+import ChatList from '@/components/ChatList';
+
 type Props = {
     params: {};
     searchParams: {
@@ -10,6 +12,7 @@ function ChatPage({ searchParams: { error } }: Props) {
         <div>
             {/*    Chat Permission Chat*/}
             {/*    Chat List*/}
+            <ChatList />
         </div>
     );
 }
