@@ -10,8 +10,7 @@ import LoadingSpinner from '@/components/LoadingSpinner';
 import { useToast } from '@/hooks/use-toast';
 import { v4 as uuidv4 } from 'uuid';
 import { addChatRef } from '@/lib/converters/ChatMembers';
-import { serverTimestamp } from '@firebase/database';
-import { setDoc } from '@firebase/firestore';
+import { setDoc, serverTimestamp } from '@firebase/firestore';
 
 function CreateChatButton({ isLarge }: { isLarge?: boolean }) {
     const router = useRouter();

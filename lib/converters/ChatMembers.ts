@@ -14,7 +14,7 @@ import {
 export interface ChatMembers {
     userId: string;
     email: string;
-    timestamp: Date | null | object;
+    timestamp: Date;
     isAdmin: boolean;
     chatId: string;
     image: string;
