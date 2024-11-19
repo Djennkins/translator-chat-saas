@@ -10,8 +10,6 @@ type Props = {
 function ChatPage({ searchParams: { error } }: Props) {
     return (
         <div>
-            {/*    Chat Permission Chat*/}
-            {/*    Chat List*/}
             <ChatList />
         </div>
     );
