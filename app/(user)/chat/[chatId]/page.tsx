@@ -4,6 +4,7 @@ import ChatInput from '@/components/ChatInput';
 import { sortedMessagesRef } from '@/lib/converters/Message';
 import { getDocs } from '@firebase/firestore';
 import ChatMessages from '@/components/ChatMessages';
+import ChatMembersBadges from '@/components/ChatMembersBadges';
 
 type Props = {
     params: {
@@ -19,13 +20,14 @@ async function ChatPage({ params: { chatId } }: Props) {
     );
 
     return (
-        <div>
+        <>
+            <ChatMembersBadges chatId={chatId} />
             <div className="flex-1">
                 <ChatMessages chatId={chatId} session={session} initialMessages={initialMessages} />
             </div>
 
             <ChatInput chatId={chatId} />
-        </div>
+        </>
     );
 }
 
