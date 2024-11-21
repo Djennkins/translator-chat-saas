@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Home() {
     return (
         <main className="">
-            <div className="relativ isolate pt-14 dark:bg-gray-900">
+            <div className="relative isolate pt-14 dark:bg-gray-900">
                 <div
                     className="absolute inset-x-0 top-28 -z-10 transform-gpu overflow-hidden blur-3xl"
                     aria-hidden="true">
