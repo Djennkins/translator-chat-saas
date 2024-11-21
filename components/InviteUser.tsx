@@ -24,8 +24,9 @@ import useAdminId from '@/hooks/useAdminId';
 import { PlusCircleIcon } from 'lucide-react';
 // TODO share link
 import { useSubscriptionStore } from '@/store/store';
-import { ToastAction, ToastActionElement } from '@/components/ui/toast';
+import { ToastAction } from '@/components/ui/toast';
 import { useRouter } from 'next/navigation';
+import ShareLink from '@/components/ShareLink';
 
 const formSchema = z.object({
     email: z.string().email('Please enter a valid email address'),
@@ -171,8 +172,8 @@ function InviteUser({ chatId }: { chatId: string }) {
                         </Form>
                     </DialogContent>
                 </Dialog>
-
-                {/*    Share Link*/}
+                
+                <ShareLink isOpen={openInviteLink} setIsOpen={setOpenInviteLink} chatId={chatId} />
             </>
         )
     );
